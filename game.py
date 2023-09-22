@@ -43,6 +43,7 @@ def choose_first():
     player1 = 1
     player2 = 2
 
+    #Decide who goes first
     turn = random.randint(1,2)
 
     if turn == player1:
@@ -50,3 +51,15 @@ def choose_first():
     elif turn == player2: 
         return 'Player2'
 
+def space_check(board, position):
+
+    #Check to see if the position is available for play
+    return board[position] == ' '
+
+def full_board(board):
+
+    #Checks to see if the board is full
+    for i in range(1,10):
+        if space_check(board, i):
+            return False
+    return True
