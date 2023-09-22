@@ -1,4 +1,5 @@
 from IPython.display import clear_output
+import random
 
 def display_board(board):
     
@@ -37,4 +38,15 @@ def win_check(board, marker):
     (board[3] == board[6] == board[9] == marker) or 
     (board[1] == board[5] == board[9] == marker) or
     (board[3] == board[5] == board[7] == marker))
+
+def choose_first():
+    player1 = 1
+    player2 = 2
+
+    turn = random.randint(1,2)
+
+    if turn == player1:
+        return 'Player1'
+    elif turn == player2: 
+        return 'Player2'
 
