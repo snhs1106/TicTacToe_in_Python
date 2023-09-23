@@ -72,3 +72,9 @@ def player_choice(board):
     
     return position
 
+def replay():
+    
+    play_again = input('Would you like to play again? (Y or N)').upper()
+    
+    return play_again == 'Y'
+
